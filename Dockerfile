@@ -1,29 +1,14 @@
-# Utiliza la imagen de node como base
-FROM node:latest
+FROM maven:3.8.4-openjdk-17
 
-# Establece el directorio de trabajo en /app
+# Set the working directory in the container
 WORKDIR /app
 
-# Copia los archivos de package.json y package-lock.json en el directorio de trabajo
-COPY package*.json ./
+# Copy the pom.xml file and the source code from the build context (host) to the working directory in the container
+COPY pom.xml .
+COPY src ./src
 
-# Instala todas las dependencias
-RUN npm install
+# Expose the default port for Spring Boot applications
+EXPOSE 8080
 
-# Copia todo el contenido de la aplicación en el directorio de trabajo
-COPY . .
-
-# Copia los archivos de configuración de ESLint, Prettier, TypeScript, Next.js y otros archivos necesarios en el directorio de trabajo
-COPY jsconfig.json .
-COPY .prettierrc .
-COPY .babelrc .
-COPY .env.development .
-COPY .gitignore .
-
-RUN npm run build
-
-# Expone el puerto 3000
-EXPOSE 3000
-
-# Ejecuta el comando para iniciar el servidor de desarrollo
-CMD [ "npm", "run", "start" ]
+# Define the entrypoint for the container
+ENTRYPOINT ["mvn", "spring-boot:run"]

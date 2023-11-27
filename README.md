@@ -1,23 +1,31 @@
-# U-Cord-FrontEnd
+<h1>U-Cord</h1>
 
 ## Prerrequisitos
 
--   Git - Version Control System
--   React JS - Framework
--   Visual Studio Code (Opcional)
+- [Git](https://git-scm.com/downloads) - Version Control System
+- [Maven](https://maven.apache.org/download.cgi) - Dependency Management
+- [Java 8](https://www.java.com/download/ie_manual.jsp) - Development Environment
+- [Spring-Boot](https://spring.io/projects/spring-boot) - Framework Web
+- [Intellij Idea](https://www.jetbrains.com/es-es/idea/download/) (Opcional)
 
 ## Instrucciones de ejecución local
 
-1. Ubicarse en la carpeta U-Cord-FrontEnd e instalar todas las dependencias y modulos necesarios para la compilacion del proyecto.
+1. Ubicarse en la carpeta U-Cord y borraremos todas las dependencias y modulos que puedan exisitir de los binarios del proyecto.
 
-```js
-npm install
+```maven
+mvn clean
 ```
 
-2. Ejecución de manera local
+2. Realizamos la compilación del proyecto
 
-```js
-npm start
+```maven
+mvn package
+```
+
+3. Ejecutamos el proyecto
+
+```maven
+mvn spring-boot:run
 ```
 
 ## Deploy

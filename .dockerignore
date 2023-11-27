@@ -1,0 +1,27 @@
+# Ignore typical Java build artifacts and directories
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore Maven build and cache directories
+.mvn/
+.m2/
+
+# Ignore local IDE configurations
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore git files
+.git/
+.gitignore
