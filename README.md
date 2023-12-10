@@ -1,4 +1,4 @@
-<h1>Repositorio Cenral</h1>
+<h1>Repositorio Central</h1>
 
 ## Prerrequisitos
 
@@ -10,7 +10,7 @@
 
 ## Instrucciones de ejecución local
 
-1. Ubicarse en la carpeta U-Cord y borraremos todas las dependencias y modulos que puedan exisitir de los binarios del proyecto.
+1. Ubicarse en la carpeta Repositorio Central y borraremos todas las dependencias y modulos que puedan exisitir de los binarios del proyecto.
 
 ```maven
 mvn clean
