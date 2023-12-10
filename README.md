@@ -1,4 +1,4 @@
-<h1>U-Cord</h1>
+<h1>Repositorio Cenral</h1>
 
 ## Prerrequisitos
 
